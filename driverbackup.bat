@@ -173,7 +173,6 @@ IF "%foldername%"=="0" (
     TIMEOUT /t 3
     REM Run Dism on the selected directory ( !selected_directory! for full path)
     CLS
-    REM echo PNPUTIL /add-driver !selected_directory!\*.inf /subdirs /install
     PNPUTIL /add-driver !selected_directory!\*.inf /subdirs /install
     IF NOT errorlevel 1 (
         ECHO Pnputil command completed successfully.
